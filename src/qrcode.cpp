@@ -2,13 +2,13 @@
 #include "qrcode.h"
 #include "qrencode.h"
 
-int offsetsX = 42;
+int offsetsX = 75;
 int offsetsY = 10;
 int screenwidth = 128;
 int screenheight = 64;
 bool QRDEBUG = false;
 
-QRcode::QRcode(OLEDDisplay *display){
+QRcode::QRcode(Adafruit_SSD1325 *display){
 	this->display = display;
 }
 
@@ -16,9 +16,9 @@ void QRcode::init(){
 	if(QRDEBUG)
 		Serial.println("QRcode init");
 
-	display->init();
-  display->flipScreenVertically();
-	display->setColor(WHITE);
+	display->begin();
+  display->setRotation(0);
+	//display->setColor(WHITE);
 }
 
 void QRcode::debug(){
@@ -29,19 +29,19 @@ void QRcode::render(int x, int y, int color){
   x=x+offsetsX;
   y=y+offsetsY;
   if(color==1) {
-	display->setColor(BLACK);
-    display->setPixel(x, y);
+	//display->setColor(BLACK);
+    display->drawPixel(x, y, BLACK);
   }
   else {
-	display->setColor(WHITE);
-    display->setPixel(x, y);
+	//display->setColor(WHITE);
+    display->drawPixel(x, y, WHITE);
   }
 }
 
 void QRcode::screenwhite(){
-	display->clear();
-	display->setColor(WHITE);
-	display->fillRect(0, 0, screenwidth, screenheight);
+	display->clearDisplay();
+	//display->setColor(WHITE);
+	display->fillRect(0, 0, screenwidth, screenheight, WHITE);
 	display->display();
 }
 
