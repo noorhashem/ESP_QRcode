@@ -1,3 +1,4 @@
+Although this library was built to be used with ESP8266 it works perfectly with ESP32 
 # ESP8266 QRcode
 
 Just copy the ESP8266 QRcode folder to your Arduino 'libraries' folder. I have included an example sketch.
@@ -6,10 +7,20 @@ The code is based on qrdquino by tz1 : https://github.com/tz1/qrduino
 
 ## Install dependency for ESP8266 QRcode
 Open Library Manager (menu Sketch > Include Library > Manage Libraries…) then install the following libraries
-- ESP8266 Oled Driver for SSD1306 display by Daniel Eichborn, Fabrice Weinberg
+- Adafruit_SSD1325_Library by Adafruit : https://github.com/adafruit/Adafruit_SSD1325_Library
 
 ## Run examples from ESP8266 QRcode
 - Open Arduino IDE, try examples of ESP8266 QRcode library
+
+## Notes
+- You can manipulate the position of the qrcode through offsetsX & offsetsY variables in qrcode.cpp file.
+- Don't forget also to change the dimensions of yhe used screen in screenwidth & screenheight in qrcode.cpp file.
+- Default screen orientation is HORIZONTAL. You can change the orientation in line 20 in qrcode.cpp file.
+for more about rotating the display, visit https://learn.adafruit.com/adafruit-gfx-graphics-library/rotating-the-display
+
+
+
+
 
 ## Display example
 ![qrcode](src/img/qrcode.JPG?raw=true)
