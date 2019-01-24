@@ -25,4 +25,3 @@ https://learn.adafruit.com/2-7-monochrome-128x64-oled-display-module/overview
 
 
 ## Display example
-![qrcode](src/img/qrcode.JPG?raw=true)
