@@ -7,7 +7,7 @@ The code is based on qrdquino by tz1 : https://github.com/tz1/qrduino
 
 ## Install dependency for ESP8266 QRcode
 Open Library Manager (menu Sketch > Include Library > Manage Libraries…) then install the following libraries
-- Adafruit_SSD1325_Library by Adafruit : https://github.com/adafruit/Adafruit_SSD1325_Library
+- Adafruit_SSD1305_Library by Adafruit : https://github.com/adafruit/Adafruit_SSD1305_Library
 
 ## Run examples from ESP8266 QRcode
 - Open Arduino IDE, try examples of ESP8266 QRcode library
