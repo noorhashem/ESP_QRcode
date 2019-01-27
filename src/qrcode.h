@@ -1,13 +1,13 @@
-#include <Adafruit_SSD1325.h>
+#include <Adafruit_SSD1305.h>
 
 class QRcode
 {
 	private:
-		Adafruit_SSD1325 *display;
+		Adafruit_SSD1305 *display;
 		void render(int x, int y, int color);
 
 	public:
-		QRcode(Adafruit_SSD1325 *display);
+		QRcode(Adafruit_SSD1305 *display);
 
 		void init();
 		void debug();

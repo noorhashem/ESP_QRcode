@@ -8,7 +8,7 @@ int screenwidth = 128;
 int screenheight = 64;
 bool QRDEBUG = false;
 
-QRcode::QRcode(Adafruit_SSD1325 *display){
+QRcode::QRcode(Adafruit_SSD1305 *display){
 	this->display = display;
 }
 
